@@ -36,4 +36,3 @@ Utilização de ferramentas de testes automatizados.
 
 - **Motivo**:
   - Garantia da qualidade do código em pontos cruciais do projeto, facilitando a detecção precoce de regressões e problemas durante o desenvolvimento.
-
