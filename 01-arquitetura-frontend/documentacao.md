@@ -19,12 +19,11 @@ Gerenciamento de estados globais na aplicação.
 - **Motivo**:
   Reduz a necessidade de boilerplate (código repetitivo) no Redux, tornando o estado mais previsível e fácil de gerenciar e facilita a manutenção e escalabilidade da aplicação, reduzindo a repetição de código.
 
-### Styled-Components e Tailwind CSS
-Estilização com CSS-in-JS e classes pré-definidas
+### Styled-Components 
+Estilização com CSS-in-JS
 
 - **Motivo**:
   - Styled-Components: Permite o encapsulamento de estilos diretamente nos componentes, evitando conflitos de CSS e oferecendo estilos dinâmicos e interativos baseados em props.
-  - Tailwind CSS: Acelera a criação de interfaces com classes utilitárias, reduzindo a necessidade de CSS personalizado para cada elemento.
 
 ### Tipagem Estática: TypeScript
 Utilização de tipagem estática
