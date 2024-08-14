@@ -34,3 +34,7 @@ Ferramentas e Técnicas para Monitoramento e Otimização:
 • Testes Automatizados: Cypress, Selenium.
 
 Os passos expostos nessa documentação deverá ajudar a melhorar a performance da aplicação e sua capacidade de lidar com um número crescente de usuários, assegurando uma experiência consistente e eficiente.
+
+#
+# DIAGRAMA
+![DIAGRAMA](https://imagizer.imageshack.com/img924/1043/OMjA8T.png)
