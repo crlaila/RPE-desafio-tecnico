@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Visão Geral
 
-## Getting Started
+Este repositório é dedicado ao processo de manutenção e evolução de uma aplicação existente que possui código apresentando erros técnicos recorrentes. O objetivo principal é seguir um plano de ação bem estruturado para garantir que a refatoração ocorra de forma eficiente, sem comprometer a funcionalidade da aplicação.
 
-First, run the development server:
+## Plano de Ação
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1. Análise Inicial
+Identificar e priorizar as áreas críticas da aplicação
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Revisão do Código Existente:**
+  - Análise detalhada do código para identificar problemas como código duplicado, falta de modularidade, baixa cobertura de testes.
+- **Identificação de Componentes Críticos:**
+  - Foco em partes críticas para o funcionamento da aplicação com identificação de módulos que exigem extremo cuidado na refatoração.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2. Planejamento
+Estabelecer um plano detalhado de execução, priorizando áreas que trazem mais valor e redução de riscos.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Definição de Prioridades:**
+  - Priorizar áreas do código que apresentam maior risco ou atrapalhe a usabilidade do usuário.
+- **Planejamento de Iterações:**
+  - Definir escopos claros para cada iteração, como a refatoração de módulos específicos.
+- **Definicação de tarefas e recursos:**
+  - Designar responsabilidades na equipe e garantir que os membros tenham conhecimento necessário.
 
-## Learn More
+### 3. Definição de Ferramentas e Práticas de Qualidade
+Aderir práticas que garantam testes e qualidade durante a refatoração.
 
-To learn more about Next.js, take a look at the following resources:
+- **Introdução de Testes Automatizados:**
+  - Priorizar a criação de testes unitários, de integração e end-to-end aumentando a cobertura de testes para garantir a estabilidade durante a refatoração.
+- **Configuração de Análise Estática de Código:**
+  - Implementar ferramentas como ESLint para garantir a consistência, padronização e qualidade do código.
+- **Implementação de CI/CD:**
+  - Configurar pipelines de integração contínua e entrega contínua para automatizar testes e deploys.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Monitoramento e Feedback Contínuo
+Monitorar a aplicação e coletar feedback do usuário para ajustes contínuos.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Coleta de Feedback:**
+  - Manter canais abertos com usuários e stakeholders para garantir que as mudanças atendam às expectativas.
+- **Ajustes Pós-Refatoração:**
+  - Realizar ajustes com base no feedback e nos resultados do monitoramento da refatoração.
 
-## Deploy on Vercel
+### 6. Treinamento e Melhoria Contínua
+Capacitar a equipe e promover uma cultura de melhoria contínua oferecendo treinamentos e workshops focados em práticas ágeis e técnicas de refatoração.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#
+# DIAGRAMA
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![DIAGRAM DO DESAFIO](https://imagizer.imageshack.com/img924/5781/UbdAM9.png)
