@@ -6,7 +6,7 @@ interface UserListProps {
   users: User[];
 }
 
-const UserList: React.FC<UserListProps> = ({ users }) => {
+const UserList = ({ users }: UserListProps) => {
   return (
     <div className="space-y-4">
       {users.map((user) => (

@@ -9,7 +9,7 @@ export const useUsers = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        // Simulating an API call
+        // Simulando uma chamada API
         const response = await new Promise<{ data: User[] }>((resolve) =>
           setTimeout(
             () =>
@@ -17,15 +17,21 @@ export const useUsers = () => {
                 data: [
                   {
                     id: 1,
-                    name: "John Doe",
-                    email: "john@example.com",
-                    avatar: "/images/user-placeholder.jpg",
+                    name: "Laila Silva",
+                    email: "lailasilva@example.com",
+                    avatar: "",
                   },
                   {
                     id: 2,
-                    name: "Jane Smith",
-                    email: "jane@example.com",
-                    avatar: "/images/user-placeholder.jpg",
+                    name: "Laila Silva",
+                    email: "lailasilva@example.com",
+                    avatar: "",
+                  },
+                  {
+                    id: 3,
+                    name: "Laila Silva",
+                    email: "lailasilva@example.com",
+                    avatar: "",
                   },
                 ],
               }),
@@ -34,7 +40,7 @@ export const useUsers = () => {
         );
         setUsers(response.data);
       } catch (err) {
-        setError("Failed to fetch users.");
+        setError("Falha ao obter os dados");
       } finally {
         setLoading(false);
       }
