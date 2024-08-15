@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Plann.er - Planeje Sua Próxima Viagem
 
-## Getting Started
+Este projeto é uma aplicação Next.js construída com TypeScript e estilizada com `styled-components`, projetada para ajudar os usuários a planejar suas viagens.
 
-First, run the development server:
+## Estrutura do Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O projeto segue a estrutura padrão de componentes, páginas, estilos e testes dentro da pasta `src`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Pipeline CI/CD
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A pipeline CI/CD foi configurada com GitHub Actions para garantir a qualidade do código através de:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Linting e Formatação**: Automatizado com ESLint e Prettier.
+2. **Testes Unitários**: Implementados com Jest e React Testing Library para validar componentes isoladamente.
+3. **Testes de Integração**: Verificam a interação entre diferentes partes do sistema.
+4. **Testes End-to-End (E2E)**: Utilizando Cypress para simular o fluxo completo do usuário.
+5. **Deploy Automatizado**: Implantação contínua para Vercel após a aprovação em todos os testes.
 
-## Learn More
+## Como Rodar o Projeto
 
-To learn more about Next.js, take a look at the following resources:
+1. Instale as dependências:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```
 
-## Deploy on Vercel
+2. Inicie o servidor de desenvolvimento:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```
+
+3. Execute o teste unitários e de integração:
+
+   ```bash
+   npm run test
+
+   ```
+
+4. Excecute os testes E2E:
+   ```bash
+   npm run buil
+   npx cypress open
+   ```
+
+### A estrutura de CI/CD implementada garante que o código seja testado antes de ser implantado em produção.
