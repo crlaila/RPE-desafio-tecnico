@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Design System - Documentação Técnica
 
-## Getting Started
+## Objetivo da documentação
 
-First, run the development server:
+O objetivo é garantir consistência visual e facilidade de manutenção, além de permitir futuras evoluções de forma ágil.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Abordagem
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. Componentização
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Componentes reutilizáveis:** Cada elemento da interface (botões, inputs, cartões) foi desenvolvido como um componente isolado usando `styled-components`.
+- **Encapsulamento de estilos:** Os estilos são encapsulados dentro dos componentes, garantindo modularidade e consistência.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 2. Tema Centralizado
 
-## Learn More
+- **Tema global (`theme.ts`):** Define cores, fontes, espaçamentos e bordas, aplicados consistentemente em toda a aplicação. Qualquer alteração no tema se propaga automaticamente, simplificando a evolução do Design System.
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Estilos Globais
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Estilos base (`globalStyles.ts`):** Configuração de estilos globais usando `createGlobalStyle` para garantir uma base consistente em toda a aplicação.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 4. Flexibilidade e Evolução
 
-## Deploy on Vercel
+- **Personalização:** Componentes são configuráveis através de props, permitindo adaptação a diferentes contextos.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 5. Padrões de código:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- \*\* Consistência no estilo de codificação e uso de `TypeScript` para orientar o uso correto do Design System.
+
+## Componentes Principais
+
+- **ProfileCard:** Exibe informações de perfil do usuário.
+- **PostCard:** Apresenta posts com conteúdo, links, hashtags e seção de comentários dinâmicos.
+- **FeedbackForm:** Formulário para envio de comentários, com renderização em tempo real.
+- **Button:** Botão estilizado, herdando temas globais.
+- **Input:** Campo de entrada de texto com estilos padronizados.
+
+## Práticas Adotadas
+
+- **Consistência visual:** Garantida pelo uso de um tema global e componentes reutilizáveis.
+- **Modularidade:** Componentes são independentes e facilmente extensíveis.
+- **Evolução contínua:** Arquitetura preparada para futuras atualizações e adição de novos componentes.
+
+## Conclusão
+
+Este Design System foi projetado para ser uma base sólida, promovendo consistência, escalabilidade e manutenção facilitada em projetos front-end. Ele está pronto para suportar futuras necessidades e adoção em diferentes contextos de desenvolvimento.
+
+#
+
+# DIAGRAMA
+
+![DIAGRAMA](https://imagizer.imageshack.com/img923/8928/GCEDra.png)
