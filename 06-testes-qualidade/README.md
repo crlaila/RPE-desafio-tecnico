@@ -45,4 +45,4 @@ A pipeline CI/CD foi configurada com GitHub Actions para garantir a qualidade do
    npx cypress open
    ```
 
-### A estrutura de CI/CD implementada garante que o código seja testado antes de ser implantado em produção.
+\*\* A estrutura de CI/CD implementada garante que o código seja testado antes de ser implantado em produção.
