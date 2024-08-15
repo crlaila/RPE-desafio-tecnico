@@ -16,6 +16,7 @@ const StyledInput = styled.input`
   }
 `;
 
+// Definindo a tipagem das props
 interface InputProps {
   type: string;
   placeholder: string;

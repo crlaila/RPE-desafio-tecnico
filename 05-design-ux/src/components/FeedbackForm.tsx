@@ -50,6 +50,7 @@ interface FeedbackFormProps {
 export function FeedbackForm({ onCommentSubmit }: FeedbackFormProps) {
   const [feedback, setFeedback] = useState("");
 
+  // Função que é chamada quando o formulário é enviado
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (feedback.trim()) {
@@ -59,6 +60,7 @@ export function FeedbackForm({ onCommentSubmit }: FeedbackFormProps) {
   };
 
   return (
+    // Formulário para enviar feedback
     <Form onSubmit={handleSubmit}>
       <Label htmlFor="feedback">Deixe seu feedback</Label>
       <TextArea

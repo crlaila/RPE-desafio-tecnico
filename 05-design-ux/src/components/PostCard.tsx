@@ -107,7 +107,7 @@ export function PostCard() {
     const newComment = {
       text: commentText,
       user: "Jane Cooper", // Essas informações podem ser dinâmicas no futuro
-      avatar: "/avatar.jpg", // Substitua pelo caminho correto do avatar
+      avatar: "/avatar.jpg", 
       timestamp: formatTimestamp(new Date()), // Timestamp dinâmico
     };
     setComments([...comments, newComment]);
