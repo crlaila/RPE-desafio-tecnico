@@ -5,8 +5,11 @@ import SignOutButton from "../components/auth/SignOutButton";
 
 export default function Home({ session }: { session: any }) {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-700 justify-center items-center">
-      <h1 className="text-2xl font-bold">Bem vindo ao Desafio 04</h1>
+    <div
+      className="min-h-screen flex flex-col bg-gradient-to-r from-blue-500 to-purple-600
+     text-white justify-center items-center"
+    >
+      <h1 className="text-2xl font-bold pb-8">Bem vindo ao Desafio 04</h1>
       {!session ? <SignInForm /> : <SignOutButton />}
     </div>
   );
