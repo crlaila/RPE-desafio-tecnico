@@ -50,11 +50,7 @@ const Hero = () => {
         <Input placeholder="Para onde você vai?" />
         <Button>Continuar &rarr;</Button>
       </InputWrapper>
-      <p>
-        Ao planejar sua viagem pela plann.er você automaticamente concorda com
-        nossos <a href="#">termos de uso</a> e{" "}
-        <a href="#">políticas de privacidade</a>.
-      </p>
+      <p>Aplicação sem funcionalidades, apenas para testes</p>
     </HeroContainer>
   );
 };
