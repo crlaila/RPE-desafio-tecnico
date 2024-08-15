@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
 import { persistReducer, persistStore } from "redux-persist";
-import storage from "redux-persist/lib/storage";
+import storage from "redux-persist/lib/storage"; // padrão: localStorage para navegador
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 import authReducer from "./authSlice";
 import loggerMiddleware from "./loggerMiddleware";
@@ -21,8 +21,11 @@ const createNoopStorage = () => {
   };
 };
 
-const storageFallback =
-  typeof window !== "undefined" ? storage : createNoopStorage();
+// Verifica se estamos no lado do cliente (navegador)
+const isClient = typeof window !== "undefined";
+
+// Usando o armazenamento correto com fallback para SSR
+const storageFallback = isClient ? storage : createNoopStorage();
 
 const persistConfig = {
   key: "root",
@@ -41,8 +44,8 @@ export const store = configureStore({
     getDefaultMiddleware({ serializableCheck: false }).concat(loggerMiddleware),
 });
 
-export const persistor = persistStore(store);
+// Somente cria o persistor no lado do cliente
+export const persistor = isClient ? persistStore(store) : null;
 
-// Definição e exportação do tipo RootState
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
