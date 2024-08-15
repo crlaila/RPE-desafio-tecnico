@@ -18,17 +18,24 @@
    - A camada de serviços usa Axios para gerenciar todas as requisições HTTP e é configurada para incluir autenticação, tratamento de erros, e lógica adicional.
 
 ## Autenticação e Autorização
+
 - A autenticação é gerenciada via tokens JWT.
 - Verificações de autorização são feitas no nível da rota, garantindo que apenas usuários autorizados tenham acesso.
 
 ## Tratamento de Erros
+
 - Os erros das APIs são capturados na camada de serviços e repassados para a UI através do Redux.
 
 ## Logging
+
 - Integração com Sentry para monitoramento de erros em produção.
 
 ## Conclusão
+
 A estrutura foi escolhida para garantir modularidade, fácil manutenção e escalabilidade, centralizando a comunicação com as APIs na camada de serviços.
+
 #
+
 # Diagrama
+
 ![Digrama](https://imagizer.imageshack.com/img924/4189/zmQF7m.png)
