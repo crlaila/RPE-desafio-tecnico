@@ -46,3 +46,9 @@ A pipeline CI/CD foi configurada com GitHub Actions para garantir a qualidade do
    ```
 
 \*\* A estrutura de CI/CD implementada garante que o código seja testado antes de ser implantado em produção.
+
+#
+
+# DIAGRAMA
+
+![DIAGRAMA](https://imagizer.imageshack.com/img922/4084/jeS1Mq.png)
