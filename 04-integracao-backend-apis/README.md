@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Arquitetura de Integração com Múltiplas APIs
 
-## Getting Started
+## Estrutura do Projeto
 
-First, run the development server:
+- **Front-end (React + Next.js)**
+- **Store (Redux)**:
+  - Gerenciamento do estado global da aplicação.
+- **Camada de Serviços (Axios)**:
+  - Todos os requests para as APIs passam por aqui, centralizando a lógica de autenticação, tratamento de erros e outras funcionalidades comuns.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Fluxo de Trabalho
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Interação entre Front-end e Store**:
+   - O estado global é gerenciado pelo Redux, e qualquer mudança de estado reflete na UI.
+2. **Chamadas para a Camada de Serviços**:
+   - Todas as requisições são feitas através da camada de serviços, que lida com a comunicação com as APIs.
+3. **Comunicação com as APIs**:
+   - A camada de serviços usa Axios para gerenciar todas as requisições HTTP e é configurada para incluir autenticação, tratamento de erros, e lógica adicional.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Autenticação e Autorização
+- A autenticação é gerenciada via tokens JWT.
+- Verificações de autorização são feitas no nível da rota, garantindo que apenas usuários autorizados tenham acesso.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tratamento de Erros
+- Os erros das APIs são capturados na camada de serviços e repassados para a UI através do Redux.
 
-## Learn More
+## Logging
+- Integração com Sentry para monitoramento de erros em produção.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Conclusão
+A estrutura foi escolhida para garantir modularidade, fácil manutenção e escalabilidade, centralizando a comunicação com as APIs na camada de serviços.
+#
+# Diagrama
+![Digrama](https://imagizer.imageshack.com/img924/4189/zmQF7m.png)
